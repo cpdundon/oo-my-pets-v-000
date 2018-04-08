@@ -60,8 +60,10 @@ class Owner
   def sell_pets
     key_arr = @pets.keys
     
-    key_arr.each do |k_e|
-      pets = @pets[k_e]
+    key_arr.each_values do |arr|
+      arr.each do |pet|
+        pet.mood = "nervous"
+      end
     end
   end
 end
